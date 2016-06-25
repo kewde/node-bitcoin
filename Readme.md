@@ -18,20 +18,21 @@
 
 node-shadowcash is a simple wrapper for the Shadowcash client's JSON-RPC API.
 
-Shadow is a decentralized network built on the framework of Bitcoin and provides free and uncensored end-to-end encrypted messaging and also includes a more anonymous cryptocurrency named ShadowCash.
+## Shadow
+Shadow is a decentralized network built on the framework of Bitcoin. It provides free, uncensorable end-to-end encrypted messaging and also includes a more anonymous cryptocurrency named ShadowCash.
 
 The API is equivalent to the API document [here](https://doc.shadowproject.io/#json-rpc-api-reference).
 The documentation on the website is not yet up to date (not all Bitcoin JSON RPC commands are valid), you're better off checking the actual client or in the file `/lib/commands.js`.
-
-You need to have you shadowcoind daemon running, please for the sake of security do this on the same machine on which the code will be runing. You can start the shadowcash daemon with the following command:
-'shadowcoind -daemon'
-
-You can download Shadow's graphical interface and daemon [here](https://shadowproject.io/en/gettingstarted).
 
 The methods are exposed as lower camelcase methods on the `shadowcash.Client`
 object, or you may call the API directly using the `cmd` method.
 
 ## Install
+
+You need to have you shadowcoind daemon running, please for the sake of security do this on the same machine on which the code will be runing. You can start the shadowcash daemon with the following command:
+'shadowcoind -daemon'
+
+You can download Shadow's graphical interface and daemon [here](https://shadowproject.io/en/gettingstarted).
 
 `npm install shadowcash`
 
