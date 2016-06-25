@@ -1,14 +1,15 @@
 {
-  "name": "bitcoin",
-  "description": "Communicate with bitcoind via JSON-RPC",
+  "name": "shadowcash",
+  "description": "Communicate with shadowcashd via JSON-RPC",
   "version": "3.0.1",
   "main": "lib/index.js",
   "keywords": [
-    "bitcoin",
+    "shadowcash",
     "rpc"
   ],
-  "author": "Bill Casarin <bill@casarin.ca> (jb55.com)",
+  "author": "Kewde <code@shadowproject.io> (shadowproject.io)",
   "contributors": [
+    "Bill Casarin <bill@casarin.ca>",
     "Sean Lavine <sean@eternalrise.com>"
   ],
   "dependencies": {},
@@ -20,7 +21,7 @@
   "optionalDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/freewil/node-bitcoin.git"
+    "url": "git://github.com/kewde/node-shadowcash.git"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -30,9 +31,9 @@
     "test": "make test"
   },
   "bugs": {
-    "url": "https://github.com/freewil/node-bitcoin/issues"
+    "url": "https://github.com/freewil/node-shadowcash/issues"
   },
-  "homepage": "https://github.com/freewil/node-bitcoin#readme",
+  "homepage": "https://github.com/freewil/node-shadowcash#readme",
   "directories": {
     "test": "test"
   },
