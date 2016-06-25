@@ -34,7 +34,7 @@ object, or you may call the API directly using the `cmd` method.
 // all config options are optional
 var client = new shadowcash.Client({
   host: 'localhost',
-  port: 8332,
+  port: 51736,
   user: 'username',
   pass: 'password',
   timeout: 30000
