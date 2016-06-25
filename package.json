@@ -31,9 +31,9 @@
     "test": "make test"
   },
   "bugs": {
-    "url": "https://github.com/freewil/node-shadowcash/issues"
+    "url": "https://github.com/kewde/node-shadowcash/issues"
   },
-  "homepage": "https://github.com/freewil/node-shadowcash#readme",
+  "homepage": "https://github.com/kewde/node-shadowcash#readme",
   "directories": {
     "test": "test"
   },
