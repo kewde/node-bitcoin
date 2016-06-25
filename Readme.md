@@ -20,6 +20,9 @@ node-shadowcash is a simple wrapper for the Shadowcash client's JSON-RPC API.
 
 
 The API is equivalent to the API document [here](https://doc.shadowproject.io/#json-rpc-api-reference).
+The documentation on the website is not yet up to date (not all Bitcoin JSON RPC commands are valid), you're better off checking the actual client or in the file `/lib/commands.js`.
+
+
 The methods are exposed as lower camelcase methods on the `shadowcash.Client`
 object, or you may call the API directly using the `cmd` method.
 
@@ -74,3 +77,17 @@ client.cmd(batch, function(err, address, resHeaders) {
 });
 ```
 
+### Get all unread messages
+*Note:* Does not work with GUI wallet, it automatically marks the message as read. Use in combination with shadowcoind.
+```js
+  client.smsgInbox('unread', function(err, result, resHeaders) {
+    if (err) return console.log(err);
+    console.log(JSON.stringify(result));
+    for(var i = 0; i < +result.result; i++){
+        var sender = result.messages[i].from;
+        var receiver = result.messages[i].to;
+        var text = result.messages[i].text;
+    
+    }
+  });
+```
