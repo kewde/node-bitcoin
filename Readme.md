@@ -23,7 +23,7 @@ Shadow is a decentralized network built on the framework of Bitcoin. It provides
 
 ## Install and run daemon
 
-You need to have you shadowcoind daemon running, please for the sake of security do this on the same machine on which the code will be runing. You can start the shadowcash daemon with the following command:
+You MUST have the shadowcoind daemon running, else your NodeJS app will return a connection error. Please for the sake of security do this on the same machine that the code will be running on. You can start the shadowcash daemon with the following command:
 `shadowcoind -daemon`
 
 A **daemon** is a process that runs in the background after you've started it.
