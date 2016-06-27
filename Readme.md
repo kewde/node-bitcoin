@@ -45,7 +45,7 @@ cd ~/.shadowcoin/
 nano shadowcoin.conf
 ```
 
-and insert the following:
+and insert the following, make sure to change USERNAME and PASSWORD to something secure:
 ```json
 server=1
 rpcuser=USERNAME
