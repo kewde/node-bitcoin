@@ -21,20 +21,26 @@ node-shadowcash is a simple wrapper for the Shadowcash client's JSON-RPC API.
 ## Shadow
 Shadow is a decentralized network built on the framework of Bitcoin. It provides free, uncensorable end-to-end encrypted messaging and also includes a more anonymous cryptocurrency named ShadowCash.
 
+## Install and run daemon
+
+You need to have you shadowcoind daemon running, please for the sake of security do this on the same machine on which the code will be runing. You can start the shadowcash daemon with the following command:
+`shadowcoind -daemon`
+
+A **daemon** is a process that runs in the background after you've started it.
+
+You can download Shadow's graphical interface and daemon for Ubuntu [here](https://shadowproject.io/en/gettingstarted).
+We highly recommend building the daemon from source, this option works best for other linux flavours such as Debian. You can find detailed instructions [here](https://doc.shadowproject.io/#linux-daemon-from-source-shadowcoind)
+
+## Install for NodeJS
+
+`npm install shadowcash`
+
+## API
 The API is equivalent to the API document [here](https://doc.shadowproject.io/#json-rpc-api-reference).
 The documentation on the website is not yet up to date (not all Bitcoin JSON RPC commands are valid), you're better off checking the actual client or in the file `/lib/commands.js`.
 
 The methods are exposed as lower camelcase methods on the `shadowcash.Client`
 object, or you may call the API directly using the `cmd` method.
-
-## Install
-
-You need to have you shadowcoind daemon running, please for the sake of security do this on the same machine on which the code will be runing. You can start the shadowcash daemon with the following command:
-'shadowcoind -daemon'
-
-You can download Shadow's graphical interface and daemon [here](https://shadowproject.io/en/gettingstarted).
-
-`npm install shadowcash`
 
 ## Examples
 
@@ -48,6 +54,21 @@ var client = new shadowcash.Client({
   pass: 'password',
   timeout: 30000
 });
+```
+
+### Get all unread messages
+*Note:* Does not work with GUI wallet, it automatically marks the message as read. Use in combination with shadowcoind.
+```js
+  client.smsgInbox('unread', function(err, result, resHeaders) {
+    if (err) return console.log(err);
+    console.log(JSON.stringify(result));
+    for(var i = 0; i < +result.result; i++){
+        var sender = result.messages[i].from;
+        var receiver = result.messages[i].to;
+        var text = result.messages[i].text;
+    
+    }
+  });
 ```
 
 ### Get balance across all accounts with minimum confirmations of 6
@@ -83,17 +104,3 @@ client.cmd(batch, function(err, address, resHeaders) {
 });
 ```
 
-### Get all unread messages
-*Note:* Does not work with GUI wallet, it automatically marks the message as read. Use in combination with shadowcoind.
-```js
-  client.smsgInbox('unread', function(err, result, resHeaders) {
-    if (err) return console.log(err);
-    console.log(JSON.stringify(result));
-    for(var i = 0; i < +result.result; i++){
-        var sender = result.messages[i].from;
-        var receiver = result.messages[i].to;
-        var text = result.messages[i].text;
-    
-    }
-  });
-```
