@@ -31,6 +31,26 @@ A **daemon** is a process that runs in the background after you've started it.
 You can download Shadow's graphical interface and daemon for Ubuntu [here](https://shadowproject.io/en/gettingstarted).
 We highly recommend building the daemon from source, this option works best for other linux flavours such as Debian. You can find detailed instructions [here](https://doc.shadowproject.io/#linux-daemon-from-source-shadowcoind)
 
+For numerous security reasons you'll get an error when first running the shadowcoind daemon. The error will instruct you to create a shadowcoin.conf file in your corresponding directory:
+
+OS | PATH
+------------ | -------------
+Windows | %appdata%\ShadowCoin
+OSX  | ~/Library/Application Support/ShadowCoin/
+Linux  | ~/.shadowcoin/
+
+Create the file `shadowcoin.conf`, the linux command line instructions are:
+```shell
+cd ~/.shadowcoin/
+nano shadowcoin.conf
+```
+
+and insert the following:
+```json
+server=1
+rpcuser=USERNAME
+rpcpassword=PASSWORD
+```
 ## Install for NodeJS
 
 `npm install shadowcash`
