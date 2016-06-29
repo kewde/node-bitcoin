@@ -7,12 +7,12 @@ language: node_js
 # See http://docs.travis-ci.com/user/customizing-the-build/#Skipping-the-Installation-Step
 install: true
 
-services:
-  - docker
+#services:
+##  - docker
 
-before_script:
-  - git submodule update --init
-  - docker build -t node-shadowcash .
+###before_script:
+####  - git submodule update --init
+#  - docker build -t node-shadowcash .
 
-script:
-  - docker run node-shadowcash
+#script:
+#  - docker run node-shadowcash
