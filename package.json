@@ -5,7 +5,14 @@
   "main": "lib/index.js",
   "keywords": [
     "shadowcash",
-    "rpc"
+    "rpc",
+    "decentralized",
+    "chat",
+    "messaging",
+    "framework",
+    "IoT",
+    "Internet of Things",
+    "Marketplace"
   ],
   "author": "Kewde <code@shadowproject.io> (shadowproject.io)",
   "contributors": [
