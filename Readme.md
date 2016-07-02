@@ -1,5 +1,4 @@
 # node-shadowcash
-[![travis][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
 [![js-standard-style][standard-image]][standard-url]
@@ -31,7 +30,6 @@ Linux:
 Windows:
 `shadowcoind.exe -daemon`
 
-O
 A **daemon** is a process that runs in the background after you've started it.
 
 You can download Shadow's graphical interface and daemon for Ubuntu [here](https://shadowproject.io/en/gettingstarted).
